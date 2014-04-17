@@ -1,0 +1,28 @@
+<div>
+  <div>
+    <h1>Week2</h1>
+  </div>
+
+  <%= render 'shared/homework' %>
+
+  <div>
+  	<h3>Link to Scaffolded resouce:</h3>
+    <table>
+    	<tr><td><%= link_to 'HomeWorks', home_works_path %></td></tr>
+    </table>
+  </div>
+
+  <div>
+  	<h3>Swap homework description case:</h3>
+    <table>
+    	<tr><td><%= link_to("SwapCase", week2_path(:caction => 'swapcase')) %></td></tr>
+    </table>
+  </div>
+
+  <div>
+  	<h3>Swap homework description case:</h3>
+    <table>
+    	<tr><td><%= link_to("<<Back", week2_path) %></td></tr>
+    </table>
+  </div>
+</div>

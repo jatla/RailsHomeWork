@@ -49,3 +49,32 @@ HomeWork.create(
 	week: 'Week1',
 	difficulty_level: 'medium',
 	description: description)
+
+description = %Q{Reading:
+				Chapter 4 Working with Controllers: 4.3 - 4.7  (Skip the rack console exercise - unless you really want to do it)
+				Chapter 2 Routing: 2.1, 2.2, 2.4, 2.6, 2.7 
+
+				Code:
+				Setup a root route to a home or welcome controller 
+				Have a link on your homepage to your scaffolded resource from last week
+				Have a link on your homepage that triggers a change on your homepage (wording change, expansion of text, change a color, etc...)
+				Create a view helper that will generate different content on your homepage based on a param value
+
+				Questions:
+				1. Why does a Rails app have routing?
+				   Routing in rails exists for two purposes:
+				   a. It maps requests to controller actions
+				   b. It generates URLs dynamically 
+				2. How would you render the same view for two different controllers? (code example is fine)
+				  Same view can be rendered from two different controllers by using explicit "render" statement in teh controller action.
+				  render "<path to template file>"
+				  Ex: render "/home/index.html"
+				3. If you wanted to check a parameter before calling any controller action, what would you do? (code example is fine)
+
+				Link to code on Github:
+				https://github.com/jatla/RailsHomeWork/commit/bd837854bbd324c2cc4251d8ee8dc5487d222443}
+
+HomeWork.create(
+	week: 'Week2',
+	difficulty_level: 'medium',
+	description: description)

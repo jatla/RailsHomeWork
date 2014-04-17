@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Week:</strong>
+  <%= @home_work.week %>
+</p>
+
+<p>
+  <strong>Difficulty level:</strong>
+  <%= @home_work.difficulty_level %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @home_work.description %>
+</p>
+
+<%= link_to 'Edit', edit_home_work_path(@home_work) %> |
+<%= link_to 'Back', home_works_path %>

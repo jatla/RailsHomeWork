@@ -1,0 +1,31 @@
+<h1>Listing home_works</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Week</th>
+      <th>Difficulty level</th>
+      <th>Description</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @home_works.each do |home_work| %>
+      <tr>
+        <td><%= home_work.week %></td>
+        <td><%= home_work.difficulty_level %></td>
+        <td><%= home_work.description %></td>
+        <td><%= link_to 'Show', home_work %></td>
+        <td><%= link_to 'Edit', edit_home_work_path(home_work) %></td>
+        <td><%= link_to 'Destroy', home_work, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Home work', new_home_work_path %>

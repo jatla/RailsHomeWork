@@ -1,6 +1,8 @@
 RailsHomeWork::Application.routes.draw do
 
  
+  resources :home_works
+
   root 'pages#home'
 
   get "week1" => 'week1#index'

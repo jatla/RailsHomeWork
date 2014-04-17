@@ -11,12 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140417040606) do
+ActiveRecord::Schema.define(version: 20140417055823) do
 
-  create_table "homeworks", force: true do |t|
+  create_table "home_works", force: true do |t|
     t.string   "week"
+    t.string   "difficulty_level"
     t.text     "description"
-    t.integer  "difficulty_level"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

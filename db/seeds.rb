@@ -45,7 +45,7 @@ description = %Q{Code:\n
 				Link to code on Github:
 				https://github.com/jatla/school_info_website}
 
-Homework.create(
+HomeWork.create(
 	week: 'Week1',
-	difficulty_level: 5,
+	difficulty_level: 'medium',
 	description: description)

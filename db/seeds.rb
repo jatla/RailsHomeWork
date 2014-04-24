@@ -6,6 +6,7 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+HomeWork.delete_all
 description = %Q{Code:\n
 				Create new rails app
 				Add a ruby version and gemset to it
@@ -76,5 +77,29 @@ description = %Q{Reading:
 
 HomeWork.create(
 	week: 'Week2',
+	difficulty_level: 'medium',
+	description: description)
+
+description = %Q{Reading
+				Chapter 1 - Section 1.6 on Configuring a DataBase
+				Chapter 5 Working with Active Record - Sections 5.1 - 5.4
+				Chapter 6 Active Record Migrations - Sections 6.1-6.3
+
+				Code
+				Add a different layout for 2 of your routes
+				Create a controller filter for just one action
+				Add a migration to your application
+
+				Questions:
+				1.
+				2.
+				3.
+				4.
+
+				Link to code on Github:
+				<please put the link to your code on github here>}
+
+HomeWork.create(
+	week: 'Week3',
 	difficulty_level: 'medium',
 	description: description)

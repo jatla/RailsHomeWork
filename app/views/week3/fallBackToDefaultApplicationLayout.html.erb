@@ -1,0 +1,23 @@
+  <div>
+    <h1>Week3</h1>
+  </div>
+
+  <% if flash[:notice] %>
+  <div>
+  	<style>
+    	h2 {color: red;text-align: left;}
+    	p {color: red;text-align: left;}
+    </style> 
+  	<h2>Notice</h2>
+    <table>
+    	<tr><td><p><%= flash[:notice] %></td></tr>
+    </table>
+  </div>
+  <% end %>
+
+  <div>
+  	<h3>Back to Week3:</h3>
+    <table>
+    	<tr><td><%= link_to("<<Back", week3_path) %></td></tr>
+    </table>
+  </div>

@@ -1,12 +1,15 @@
 RailsHomeWork::Application.routes.draw do
 
+  
   resources :home_works
 
   root 'pages#home'
 
   get "week1" => 'week1#index'
   get "week2(/:caction)" => 'week2#index', as: :week2
-  
+  get "week3" => 'week3#index', as: :week3
+  get "week3/useDifferentLayoutThanWeek3Layout" => 'week3#useDifferentLayoutThanWeek3Layout', as: :week3_dff_layout
+  get "week3/fallBackToDefaultApplicationLayout" => 'week3#fallBackToDefaultApplicationLayout', as: :week3_fallback_layout
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

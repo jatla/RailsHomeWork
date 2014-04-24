@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>RailsHomeWork</title>
+  <title>Week3HomeworkLayout</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
     <style>
-    h1 {color: blue;text-align: center;}
-    a {color: green;}
+    h1 {color: green;text-align: left;}
+    a {color: red;}
     </style> 
-<%= yield %>
+    
 <%= render 'shared/homework' %>
+<%= yield %>
 </body>
 </html>

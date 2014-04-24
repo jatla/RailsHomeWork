@@ -1,6 +1,6 @@
 class HomeWorksController < ApplicationController
   before_action :set_home_work, only: [:show, :edit, :update, :destroy]
-
+  layout 'homeworks'
   # GET /home_works
   # GET /home_works.json
   def index

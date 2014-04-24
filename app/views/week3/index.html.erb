@@ -1,0 +1,23 @@
+<div>
+  <div>
+    <h1>Week3</h1>
+  </div>
+
+  <div>
+  	<h3>We are using week3layout for this page, where home work information is displayed at the top of the page</h3>
+  </div>
+
+  <div>
+  	<h3>The Following route under week3 uses different layout</h3>
+    <table>
+    	<tr><td><%= link_to("YetAnotherWeek3Layout", week3_dff_layout_path) %></td></tr>
+    </table>
+  </div>
+
+  <div>
+  	<h3>The Following route under week3 falls back to using default 'application' layout</h3>
+    <table>
+    	<tr><td><%= link_to("FallBackToDefaultApplicationLayout", week3_fallback_layout_path) %></td></tr>
+    </table>
+  </div>
+</div>

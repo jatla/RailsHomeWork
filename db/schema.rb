@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140424172019) do
+ActiveRecord::Schema.define(version: 20140501035733) do
 
   create_table "home_works", force: true do |t|
     t.string   "week"
@@ -20,6 +20,29 @@ ActiveRecord::Schema.define(version: 20140424172019) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "status"
+  end
+
+  create_table "home_works_students", id: false, force: true do |t|
+    t.integer "student_id",   null: false
+    t.integer "home_work_id", null: false
+  end
+
+  add_index "home_works_students", ["home_work_id", "student_id"], name: "index_home_works_students_on_home_work_id_and_student_id", unique: true
+
+  create_table "projects", force: true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.text     "github_link"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "students", force: true do |t|
+    t.string   "name"
+    t.integer  "age"
+    t.string   "email"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end

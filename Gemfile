@@ -7,8 +7,15 @@ group :test, :development do
 	gem 'rspec-rails'
 end
 
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+# Use sqlite3 as the database for Active Record in test & development
+group :test, :development do
+	gem 'sqlite3'
+end
+
+# Use postgres as the database for Active Record in prod
+group :production do
+	gem 'pg', '~> 0.17.1'
+end
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'

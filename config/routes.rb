@@ -1,6 +1,10 @@
 RailsHomeWork::Application.routes.draw do
 
   
+  resources :projects
+
+  resources :students
+
   resources :home_works
 
   root 'pages#home'

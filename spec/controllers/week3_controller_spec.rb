@@ -9,4 +9,17 @@ describe Week3Controller do
     end
   end
 
+  describe "GET 'useDifferentLayoutThanWeek3Layout'" do
+    it "returns http success" do
+      get 'useDifferentLayoutThanWeek3Layout'
+      response.should be_success
+    end
+  end
+
+  describe "GET 'fallBackToDefaultApplicationLayout'" do
+    it "returns http success" do
+      get 'fallBackToDefaultApplicationLayout'
+      response.should be_success
+    end
+  end
 end

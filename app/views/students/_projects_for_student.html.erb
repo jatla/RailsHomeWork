@@ -1,0 +1,17 @@
+  <div>
+  	<% if @student.projects.any? %>
+    	<h4> Current Projects: </h4>
+    	<% for project in @student.projects %>
+	        <div class="field">
+	          <strong>Name: </strong>
+	          <%= project.name %>
+	          <strong>Github Link:</strong>
+	          <%= project.github_link %>
+	        </div>
+	        <div class="field">
+	          <strong>Description: </strong>
+	          <%= project.description %>
+	        </div>
+    	<% end %>
+    <% end %>
+  </div>

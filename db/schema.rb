@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140501035733) do
+ActiveRecord::Schema.define(version: 20140521030142) do
 
   create_table "home_works", force: true do |t|
     t.string   "week"
@@ -35,6 +35,7 @@ ActiveRecord::Schema.define(version: 20140501035733) do
     t.text     "github_link"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "student_id"
   end
 
   create_table "students", force: true do |t|

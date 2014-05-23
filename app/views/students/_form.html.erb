@@ -1,3 +1,5 @@
+
+<h2> Student: </h2>
 <%= form_for(@student) do |f| %>
   <% if @student.errors.any? %>
     <div id="error_explanation">
@@ -23,6 +25,29 @@
     <%= f.label :email %><br>
     <%= f.text_field :email %>
   </div>
+
+  <div>
+    <% if @student.new_record? %>
+      <h2> Project: </h2>
+      <%= f.fields_for :projects do |p| %>
+          <div class="field">
+            <%= p.label :project_name %><br>
+            <%= p.text_field :name %>
+          </div>
+          <div class="field">
+            <%= p.label :description %><br>
+            <%= p.text_area :description %>
+          </div>
+          <div class="field">
+            <%= p.label :github_link %><br>
+            <%= p.text_field :github_link %>
+          </div>
+      <% end %>
+    <% end %>
+  </div>
+
+  <%= render 'projects_for_student', s: @student%>
+
   <div class="actions">
     <%= f.submit %>
   </div>

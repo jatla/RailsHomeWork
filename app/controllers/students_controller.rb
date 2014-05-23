@@ -1,5 +1,5 @@
 class StudentsController < ApplicationController
-  before_action :set_student, only: [:show, :edit, :update, :destroy]
+  before_action :set_student, :set_projects, only: [:show, :edit, :update, :destroy]
   layout "students"
 
   # GET /students
@@ -16,6 +16,7 @@ class StudentsController < ApplicationController
   # GET /students/new
   def new
     @student = Student.new
+    @student.projects.build
   end
 
   # GET /students/1/edit
@@ -68,8 +69,12 @@ class StudentsController < ApplicationController
       @student = Student.find(params[:id])
     end
 
+    def set_projects
+      @projects = @student.projects
+    end
+
     # Never trust parameters from the scary internet, only allow the white list through.
     def student_params
-      params.require(:student).permit(:name, :age, :email)
+      params.require(:student).permit(:name, :age, :email, projects_attributes: [:name, :description, :github_link])
     end
 end

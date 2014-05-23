@@ -14,6 +14,7 @@ RailsHomeWork::Application.routes.draw do
   get "week3" => 'week3#index', as: :week3
   get "week3/useDifferentLayoutThanWeek3Layout" => 'week3#useDifferentLayoutThanWeek3Layout', as: :week3_dff_layout
   get "week3/fallBackToDefaultApplicationLayout" => 'week3#fallBackToDefaultApplicationLayout', as: :week3_fallback_layout
+  get "week6" => 'week6#index', as: :week6
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

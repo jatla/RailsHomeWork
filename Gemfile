@@ -10,6 +10,7 @@ end
 # Use sqlite3 as the database for Active Record in test & development
 group :test, :development do
 	gem 'sqlite3'
+	gem 'capybara'
 end
 
 # Use postgres as the database for Active Record in prod

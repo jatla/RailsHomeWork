@@ -9,4 +9,6 @@ class Student < ActiveRecord::Base
     validates :email, confirmation: true, uniqueness: true
 
 	scope :names, -> { pluck :name }
+
+	accepts_nested_attributes_for :projects
 end
